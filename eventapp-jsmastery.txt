@@ -1,0 +1,14 @@
+
+
+делал по этой
+YT JS Mastery, 
+https://www.youtube.com/watch?v=zgGhzuBZOQg&t=144s
+https://github.com/adrianhajdin/event_platform/tree/main
+
+
+
+в проекте:
+-- MongoDB, Clerk, Stripe, Tailwind CSS, Shadcn, React Hook Form, Zod(for validation), Uploadthing(for images), React-Datepicker
+-- в навигации меняются цвет кнопок при нажатии на них при переходе на др. стр.
+-- под мобильные устройства Гамбургер выезжающее меню
+-- Hero section  с правой и левой частями под мобильные устройства 

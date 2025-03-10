@@ -1,0 +1,14 @@
+
+
+
+
+import { Button } from "@/components/ui/button";
+
+
+export default function Home() {
+  return (
+    <main >
+         <Button>main page</Button>
+    </main>
+  )
+}
