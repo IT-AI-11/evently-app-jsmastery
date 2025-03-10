@@ -12,3 +12,25 @@ https://github.com/adrianhajdin/event_platform/tree/main
 -- в навигации меняются цвет кнопок при нажатии на них при переходе на др. стр.
 -- под мобильные устройства Гамбургер выезжающее меню
 -- Hero section  с правой и левой частями под мобильные устройства 
+
+
+
+
+===========================================================================================
+ОСНОВНЫЕ СТРАНИЦЫ Я использовал для проекта: nextjs-mongodb-blog
+
+для Vercel
+ПРОЕКТ:   https://evently-app-jsmastery.vercel.app/
+Environment Variables:    https://vercel.com/verceltestingnextjs-projects/evently-app-jsmastery/settings/environment-variables
+Logs:   https://vercel.com/verceltestingnextjs-projects/nextjs-mongodb-blog/logs?selectedLogId=4ktps-1740564885837-380e68bfca1e&page=2
+Deployments:   https://vercel.com/verceltestingnextjs-projects/evently-app-jsmastery/deployments
+
+для Clerk
+Webhook:   https://clerk.com/docs/webhooks/sync-data
+Endpoints:   https://dashboard.clerk.com/apps/app_2tasueqMLeMKAjmt91hFWBs0YMk/instances/ins_2tasumBf4b6tdvusdwAh3DWUc06/webhooks
+Users:   https://dashboard.clerk.com/apps/app_2tasueqMLeMKAjmt91hFWBs0YMk/instances/ins_2tasumBf4b6tdvusdwAh3DWUc06/users
+Dubug Hooks:   https://clerk.com/docs/webhooks/debug-your-webhooks
+
+GitHub
+https://github.com/IT-AI-11/nextjs-mongodb-blog    мой nextjs-mongodb-blog
+===========================================================================================
