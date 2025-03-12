@@ -39,6 +39,7 @@ export type CreateUserParams = {
     path: string
   }
   
+ 
   export type UpdateEventParams = {
     userId: string
     event: {
@@ -105,6 +106,7 @@ export type CreateUserParams = {
   }
   
   // ====== CATEGORY PARAMS
+  // to lib/actions/category.actions.ts
   export type CreateCategoryParams = {
     categoryName: string
   }

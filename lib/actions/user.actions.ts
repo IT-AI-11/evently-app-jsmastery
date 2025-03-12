@@ -1,7 +1,16 @@
 
 
-// Server actions(они endpoints) ==> как POST, GET, PUT, DELETE
+//#region [rgba(2, 196, 15, 0.2)]
+
+//TODO Server actions(они endpoints) ==> как POST, GET, PUT, DELETE
+//TODO + 'use server'
+
+//#endregion
+
+
 'use server'
+
+//#region [rgba(0, 100, 255, 0.2)]
 
 import { connectToDatabase } from "../database"
 import { CreateUserParams, UpdateUserParams } from "@/types"// from types/index.ts
@@ -9,6 +18,8 @@ import { handleError } from "../utils"
 import User from "../database/models/user.model"
 import Order from "../database/models/order.model"
 import Event from "../database/models/event.model"
+
+//#endregion
 
 
 // CREATE user
@@ -30,6 +41,7 @@ export async function createUser(user: CreateUserParams) {// CreateUserParams fr
 
 
   // UPDATE user
+  // to api/webhook/clerk/route.ts
   export async function updateUser(clerkId: string, user: UpdateUserParams) {
     try {
       await connectToDatabase()
@@ -46,6 +58,7 @@ export async function createUser(user: CreateUserParams) {// CreateUserParams fr
 
 
   // DELETE user
+  // to api/webhook/clerk/route.ts
   export async function deleteUser(clerkId: string) {
     try {
       await connectToDatabase()
@@ -79,3 +92,9 @@ export async function createUser(user: CreateUserParams) {// CreateUserParams fr
       handleError(error)
     }
   }
+
+
+
+
+
+

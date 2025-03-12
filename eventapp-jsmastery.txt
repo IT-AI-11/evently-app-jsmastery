@@ -8,7 +8,7 @@ https://github.com/adrianhajdin/event_platform/tree/main
 
 
 в проекте:
--- MongoDB, Clerk, Stripe, Tailwind CSS, Shadcn, React Hook Form, Zod(for validation), Uploadthing(for images), React-Datepicker
+-- MongoDB, Clerk, Stripe, Tailwind CSS, Shadcn, React Hook Form, Zod(for validation of <form> fields), Uploadthing(for images), React-Datepicker
 -- в навигации меняются цвет кнопок при нажатии на них при переходе на др. стр.
 -- под мобильные устройства Гамбургер выезжающее меню
 -- Hero section  с правой и левой частями под мобильные устройства 
@@ -34,3 +34,49 @@ Dubug Hooks:   https://clerk.com/docs/webhooks/debug-your-webhooks
 GitHub
 https://github.com/IT-AI-11/nextjs-mongodb-blog    мой nextjs-mongodb-blog
 ===========================================================================================
+
+
+
+в webhook из Clerk если версия Clerk latest то publicMetadata не передает данные в MongoDB и document в MongoDB пустой
+надо Clerk на ниже версию переустановить на "@clerk/nextjs": "^5.7.5", в packege.json
+    await client.users.updateUserMetadata(id, {
+              publicMetadata: {
+                userId: newUser._id
+              }
+            })
+
+
+сразу установит: react-hook-form, zod, 
+https://ui.shadcn.com/docs/components/form
+npx shadcn@latest add form
+
+
+
+// colors ================
+Цвета для комментариев и областей из extensions скачал "Better Comments" и "Colored Regions"
+// см. package json цвета "Colored Regions"
+//#region [rgba(2, 196, 15, 0.2)]
+// hello world 
+//#endregion
+
+//#region [rgba(0, 100, 255, 0.2)]
+//#endregion
+
+//region [rgba(241, 196, 15, 0.4)]
+// hello 
+//endregion
+
+// "Better Comments"
+/**
+ * * Green
+ * ! Red
+ * TODO Orange
+ * ? Blue
+ */
+
+//* Green
+//! Red
+//TODO orange
+//? Blue
+// colors ================
+          

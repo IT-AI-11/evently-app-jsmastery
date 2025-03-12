@@ -17,6 +17,8 @@ export const headerLinks = [
     },
   ]
   
+
+   // to components/shared/EventForm.tsx
   export const eventDefaultValues = {
     title: '',
     description: '',
