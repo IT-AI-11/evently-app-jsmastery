@@ -6,23 +6,19 @@
 // см. Set Up A FileRouter > Creating your first FileRoute
 
 //#1   original
-import {
-    generateUploadButton,
-    generateUploadDropzone,
-    generateReactHelpers,//test
-} from "@uploadthing/react";
-//import type { OurFileRouter } from "~/app/api/uploadthing/core";    original не работает
-import type { OurFileRouter } from "@/app/api/uploadthing/core";    //new работает
-
-
-export const UploadButton = generateUploadButton<OurFileRouter>();
-export const UploadDropzone = generateUploadDropzone<OurFileRouter>();
-export const { useUploadThing, uploadFiles } = generateReactHelpers<OurFileRouter>();// test
+// import {
+//     generateUploadButton,
+//     generateUploadDropzone,
+// } from "@uploadthing/react";
+// //import type { OurFileRouter } from "~/app/api/uploadthing/core";    original не работает
+// import type { OurFileRouter } from "@/app/api/uploadthing/core";    //new работает
+// export const UploadButton = generateUploadButton<OurFileRouter>();
+// export const UploadDropzone = generateUploadDropzone<OurFileRouter>();
 
 
 
 //#2
 //import { generateReactHelpers } from "@uploadthing/react/hook";    original  не работает
-// import { generateReactHelpers } from "@uploadthing/react/"  //new  работает
-// import type { OurFileRouter } from "@/app/api/uploadthing/core";
-// export const { useUploadThing, uploadFiles } = generateReactHelpers<OurFileRouter>();
+import { generateReactHelpers } from "@uploadthing/react/"  //new  работает
+import type { OurFileRouter } from "@/app/api/uploadthing/core";
+export const { useUploadThing, uploadFiles } = generateReactHelpers<OurFileRouter>();
