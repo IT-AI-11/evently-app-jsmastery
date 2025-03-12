@@ -120,6 +120,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
       endDateTime: new Date(event.endDateTime) 
     }
     : eventDefaultValues;
+    
   const router = useRouter();
 
   const { startUpload } = useUploadThing('imageUploader')

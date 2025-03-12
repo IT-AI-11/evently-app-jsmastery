@@ -19,6 +19,7 @@
 
 //#2
 //import { generateReactHelpers } from "@uploadthing/react/hook";    original  не работает
-import { generateReactHelpers } from "@uploadthing/react"  //new  работает
+//import { generateReactHelpers } from "@uploadthing/react/"  //new  не работает из-за дополнительной '/'
+import { generateReactHelpers } from "@uploadthing/react" // эта работает без дополнительной в конце'/'
 import type { OurFileRouter } from "@/app/api/uploadthing/core";
 export const { useUploadThing, uploadFiles } = generateReactHelpers<OurFileRouter>();
