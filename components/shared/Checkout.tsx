@@ -9,7 +9,7 @@ import { IEvent } from '@/lib/database/models/event.model';
 export default function Checkout({ event, userId }: { event: IEvent, userId: string }) {
   return (
     <div>
-      check out component
+      check out component STIPE 7777
     </div>
   )
 }
