@@ -6,8 +6,9 @@
 //#region [rgba(0, 100, 255, 0.2)]
 // imports
 
-//import CheckoutButton from '@/components/shared/CheckoutButton';
+
 //import Collection from '@/components/shared/Collection';
+import CheckoutButton from '@/components/shared/CheckoutButton';
 import Collection from '@/components/shared/Collection';
 import { getEventById, getRelatedEventsByCategory } from '@/lib/actions/event.actions'
 import { formatDateTime } from '@/lib/utils';
@@ -69,8 +70,8 @@ export default async function EventDetails({ params: { id }, searchParams }: Sea
             </div>
           </div>
 
-          {/* <CheckoutButton event={event} />    original */}
-             <button>CheckOut Button</button>
+           <CheckoutButton event={event} /> 
+             {/* <button>CheckOut Button</button> */}
 
           <div className="flex flex-col gap-5">
             <div className='flex gap-2 md:gap-3'>

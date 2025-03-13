@@ -15,7 +15,7 @@
 
 import { connectToDatabase } from '../database';
 import { handleError } from '../utils';
-import { CheckoutOrderParams, CreateOrderParams, GetOrdersByEventParams, GetOrdersByUserParams } from "@/types"
+import { GetOrdersByUserParams } from "@/types"
 import Order from '../database/models/order.model';
 import Event from '../database/models/event.model';
 import User from '../database/models/user.model';
