@@ -21,7 +21,7 @@ import Image from 'next/image';
 
 
 
-// to 
+// в Card.tsx кликаем в <Link href={`/events/${event._id}`}> и переходим на EventDetails, app/(root)/events/[id]/page.tsx
 export default async function EventDetails({ params: { id }, searchParams }: SearchParamProps) {
 
   // этот { params: { id } получает доступ прям к URL http://localhost:3000/events/67d18447a0ab908414a05c62
@@ -113,7 +113,7 @@ export default async function EventDetails({ params: { id }, searchParams }: Sea
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
           limit={3}
-          page={searchParams.page as string}
+          // page={searchParams.page as string}    original
           totalPages={relatedEvents?.totalPages}
         />
     </section>

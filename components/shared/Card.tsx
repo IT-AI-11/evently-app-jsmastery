@@ -15,6 +15,8 @@ type CardProps = {
   hidePrice?: boolean
 }
 
+
+// to components/shared/Collection.tsx
 const Card = async ({ event, hasOrderLink, hidePrice }: CardProps) => {
   const { sessionClaims } = await auth();
   const userId = sessionClaims?.userId as string;
@@ -28,8 +30,8 @@ const Card = async ({ event, hasOrderLink, hidePrice }: CardProps) => {
         style={{backgroundImage: `url(${event.imageUrl})`}}
         className="flex-center flex-grow bg-gray-50 bg-cover bg-center text-grey-500"
       />
-      {/* IS EVENT CREATOR ... */}
 
+      {/* IS EVENT CREATOR ... */}
       {isEventCreator && !hidePrice && (
         <div className="absolute right-2 top-2 flex flex-col gap-4 rounded-xl bg-white p-3 shadow-sm transition-all">
           <Link href={`/events/${event._id}/update`}>
@@ -37,6 +39,7 @@ const Card = async ({ event, hasOrderLink, hidePrice }: CardProps) => {
           </Link>
 
           <DeleteConfirmation eventId={event._id} />
+          
         </div>
       )}
 

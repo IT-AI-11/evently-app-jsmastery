@@ -14,11 +14,6 @@ import Link from 'next/link'
 //#endregion
 
 
-
-
-
-
-
 export default async function Home({ searchParams }: SearchParamProps) {
   const page = Number(searchParams?.page) || 1;
   const searchText = (searchParams?.query as string) || '';
@@ -56,7 +51,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
         <h2 className="h2-bold">Trust by <br /> Thousands of Events</h2>
 
         <div className="flex w-full flex-col gap-5 md:flex-row">
-          {/* <Search />
+          {/* <Search />    original
           <CategoryFilter /> */}
         </div>
 
@@ -66,9 +61,10 @@ export default async function Home({ searchParams }: SearchParamProps) {
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
           limit={6}
-          page={page}
+          // page={page}    original
           totalPages={events?.totalPages}
         />
+
       </section>
     </>
   )
