@@ -71,14 +71,6 @@ import { createEvent, updateEvent } from "@/lib/actions/event.actions"
 
 
 
-
-
-
-
-
-
-
-
 type EventFormProps = {
     userId: string
     type: "Create" | "Update"
@@ -120,7 +112,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
       endDateTime: new Date(event.endDateTime) 
     }
     : eventDefaultValues;
-    
+
   const router = useRouter();
 
   const { startUpload } = useUploadThing('imageUploader')

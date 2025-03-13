@@ -22,7 +22,7 @@ import Category from "../database/models/category.model"
 
 
 // to components/shared/Dropdown.tsx
-export const createCategory = async ({ categoryName }: CreateCategoryParams) => {
+export const createCategory = async ({ categoryName }: CreateCategoryParams) => {// : CreateCategoryParams это type для TypeScript
   try {
     await connectToDatabase();
 

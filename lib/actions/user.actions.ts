@@ -42,7 +42,7 @@ export async function createUser(user: CreateUserParams) {// CreateUserParams fr
 
   // UPDATE user
   // to api/webhook/clerk/route.ts
-  export async function updateUser(clerkId: string, user: UpdateUserParams) {
+  export async function updateUser(clerkId: string, user: UpdateUserParams) {// : UpdateUserParams это type для TypeScript
     try {
       await connectToDatabase()
   

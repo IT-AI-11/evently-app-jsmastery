@@ -151,6 +151,8 @@ export type CreateUserParams = {
     keysToRemove: string[]
   }
   
+ // to (root) > events > [id] > page.tsx > EventDetails
+ // to Home.tsx
   export type SearchParamProps = {
     params: { id: string }
     searchParams: { [key: string]: string | string[] | undefined }

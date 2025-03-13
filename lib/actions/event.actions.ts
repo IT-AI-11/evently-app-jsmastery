@@ -50,7 +50,7 @@ const populateEvent = (query: any) => {
 }
 
 // CREATE
-export async function createEvent({ userId, event, path }: CreateEventParams) {
+export async function createEvent({ userId, event, path }: CreateEventParams) {// : CreateEventParams это type для TypeScript
   try {
     await connectToDatabase()
 
@@ -67,7 +67,8 @@ export async function createEvent({ userId, event, path }: CreateEventParams) {
 }
 
 // GET ONE EVENT BY ID
-export async function getEventById(eventId: string) {
+// to (root) > events > [id] > page.tsx > EventDetails
+export async function getEventById(eventId: string) {// : string это type для TypeScript
   try {
     await connectToDatabase()
 
@@ -82,7 +83,7 @@ export async function getEventById(eventId: string) {
 }
 
 // UPDATE
-export async function updateEvent({ userId, event, path }: UpdateEventParams) {
+export async function updateEvent({ userId, event, path }: UpdateEventParams) {// : UpdateEventParams это type для TypeScript
   try {
     await connectToDatabase()
 
@@ -105,7 +106,7 @@ export async function updateEvent({ userId, event, path }: UpdateEventParams) {
 }
 
 // DELETE
-export async function deleteEvent({ eventId, path }: DeleteEventParams) {
+export async function deleteEvent({ eventId, path }: DeleteEventParams) {// : DeleteEventParams это type для TypeScript
   try {
     await connectToDatabase()
 
@@ -117,7 +118,7 @@ export async function deleteEvent({ eventId, path }: DeleteEventParams) {
 }
 
 // GET ALL EVENTS
-export async function getAllEvents({ query, limit = 6, page, category }: GetAllEventsParams) {
+export async function getAllEvents({ query, limit = 6, page, category }: GetAllEventsParams) {// : GetAllEventsParams это type для TypeScript
   try {
     await connectToDatabase()
 
@@ -146,7 +147,7 @@ export async function getAllEvents({ query, limit = 6, page, category }: GetAllE
 }
 
 // GET EVENTS BY ORGANIZER
-export async function getEventsByUser({ userId, limit = 6, page }: GetEventsByUserParams) {
+export async function getEventsByUser({ userId, limit = 6, page }: GetEventsByUserParams) {// : GetEventsByUserParams это type для TypeScript
   try {
     await connectToDatabase()
 
@@ -168,12 +169,13 @@ export async function getEventsByUser({ userId, limit = 6, page }: GetEventsByUs
 }
 
 // GET RELATED EVENTS: EVENTS WITH SAME CATEGORY
+// to (root) > events > [id] > page.tsx > EventDetails
 export async function getRelatedEventsByCategory({
   categoryId,
   eventId,
   limit = 3,
   page = 1,
-}: GetRelatedEventsByCategoryParams) {
+}: GetRelatedEventsByCategoryParams) {// : GetRelatedEventsByCategoryParams это type для TypeScript
   try {
     await connectToDatabase()
 
