@@ -16,9 +16,9 @@ type CollectionProps = {
     emptyTitle: string,
     emptyStateSubtext: string,
     limit: number,
-    //page: number | string,
+    page: number | string,
     totalPages?: number,
-    //urlParamName?: string,
+    urlParamName?: string,
     collectionType?: 'Events_Organized' | 'My_Tickets' | 'All_Events'
   }
 
@@ -28,10 +28,10 @@ const Collection = ({
     data,
     emptyTitle,
     emptyStateSubtext,
-    //page,    original
+    page,    
     totalPages = 0,
     collectionType,
-    //urlParamName,    original
+    urlParamName,  
   }: CollectionProps) => {
 
     return (
@@ -53,7 +53,7 @@ const Collection = ({
     
               {totalPages > 1 && (
                 // <Pagination urlParamName={urlParamName} page={page} totalPages={totalPages}    original  />
-                "pagination   test  my"
+              <h1>  pagination  </h1> // my
               )}
             </div>
           ): (

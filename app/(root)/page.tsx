@@ -15,13 +15,25 @@ import Link from 'next/link'
 
 
 export default async function Home({ searchParams }: SearchParamProps) {
-  const page = Number(searchParams?.page) || 1;
-  const searchText = (searchParams?.query as string) || '';
-  const category = (searchParams?.category as string) || '';
+
+  const params = await searchParams;
+
+  // original
+  // const page = Number(searchParams?.page) || 1;
+  // const searchText = (searchParams?.query as string) || '';
+  // const category = (searchParams?.category as string) || '';
+
+  // from ai
+  const page = Number(params?.page) || 1;
+  const searchText = (params?.query as string) || '';
+  const category = (params?.category as string) || '';
+
+
+
 
   // получаем все events из MongoDB из events collection
   const events = await getAllEvents({ query: searchText, category, page, limit: 6 })
-  console.log("all events from 'events' collection ========> ", events?.data)
+  //console.log("all events from 'events' collection ========> ", events?.data)
 
   return (
     <>
@@ -61,7 +73,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
           limit={6}
-          // page={page}    original
+          page={page}   
           totalPages={events?.totalPages}
         />
 

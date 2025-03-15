@@ -22,7 +22,8 @@ import Image from 'next/image';
 
 
 // в Card.tsx кликаем в <Link href={`/events/${event._id}`}> и переходим на EventDetails, app/(root)/events/[id]/page.tsx
-export default async function EventDetails({ params: { id }, searchParams }: SearchParamProps) {
+export default async function EventDetails({ params: { id }, searchParams }: SearchParamProps) { 
+
 
   // этот { params: { id } получает доступ прям к URL http://localhost:3000/events/67d18447a0ab908414a05c62
   const event = await getEventById(id);// конкретный single event из MongoDB, этот event прям в URL
@@ -113,7 +114,7 @@ export default async function EventDetails({ params: { id }, searchParams }: Sea
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
           limit={3}
-          // page={searchParams.page as string}    original
+          page={searchParams.page as string} 
           totalPages={relatedEvents?.totalPages}
         />
     </section>
