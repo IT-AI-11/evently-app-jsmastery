@@ -4,7 +4,7 @@
 
 import { IEvent } from '@/lib/database/models/event.model'
 import React from 'react'
-import Card from './Card'
+//import Card from './Card'
 //import Card from './Card'
 //import Pagination from './Pagination'
 
@@ -45,7 +45,7 @@ const Collection = ({
     
                   return (
                     <li key={event._id} className="flex justify-center">
-                      <Card event={event} hasOrderLink={hasOrderLink} hidePrice={hidePrice} />
+                      {/* <Card event={event} hasOrderLink={hasOrderLink} hidePrice={hidePrice} /> */}
                     </li>
                   )
                 })}
@@ -66,9 +66,5 @@ const Collection = ({
       )
 
 }
-
-
-
-
 
 export default Collection
