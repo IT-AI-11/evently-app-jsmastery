@@ -31,6 +31,10 @@ export default async function EventDetails({ params: { id }, searchParams }: Sea
 
 
 
+  const pppTEST = await searchParams;
+
+
+
   const relatedEvents = await getRelatedEventsByCategory({
     categoryId: event.category._id,
     eventId: event._id,
@@ -114,7 +118,8 @@ export default async function EventDetails({ params: { id }, searchParams }: Sea
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
           limit={3}
-          page={searchParams.page as string} 
+          // page={searchParams.page as string}    original
+          page={pppTEST.page as string} 
           totalPages={relatedEvents?.totalPages}
         />
     </section>
