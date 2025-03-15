@@ -3,7 +3,7 @@
 // imports
 
 //import CategoryFilter from '@/components/shared/CategoryFilter';
-import Collection from '@/components/shared/Collection'
+//import Collection from '@/components/shared/Collection'
 //import Search from '@/components/shared/Search';
 import { Button } from '@/components/ui/button'
 import { getAllEvents } from '@/lib/actions/event.actions';
@@ -100,8 +100,10 @@ export default async function Home({ searchParams }: SearchParamProps) {
   const params = await searchParams;
   console.log(headers)
   //headers().get('Content-Security-Policy')
-  const hea = (await headers()).get('Content-Security-Policy')
-  console.log(hea)
+ const waitHeaders = await headers()
+ const userAgent = waitHeaders.get('user-agent')
+  //const hea = (await headers()).get('Content-Security-Policy')
+  console.log(userAgent)
 
   //original
   // const page = Number(searchParams?.page) || 1;
@@ -122,6 +124,9 @@ export default async function Home({ searchParams }: SearchParamProps) {
   // получаем все events из MongoDB из events collection
   const events = await getAllEvents({ query: searchText, category, page, limit: 6, })
   //console.log("all events from 'events' collection ========> ", events?.data)
+
+
+
 
   return (
     <>
@@ -155,7 +160,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
           <CategoryFilter /> */}
         </div>
 
-        <Collection 
+        {/* <Collection 
           data={events?.data}
           emptyTitle="No Events Found"
           emptyStateSubtext="Come back later"
@@ -163,7 +168,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
           limit={6}
           page={page}   
           totalPages={events?.totalPages}
-        />
+        /> */}
 
       </section>
     </>
